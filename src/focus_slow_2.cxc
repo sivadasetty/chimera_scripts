@@ -1,0 +1,41 @@
+~distance
+~label
+
+clip off
+clip front off
+view clip off
+
+cartoon style width 1.5 thickness 0.15 arrows true
+
+coordset #1 1900
+
+movie record
+
+view start
+wait 240
+
+view react 480
+wait 480
+
+hide /X:132@OG,HG1 /X:266@C30,O16 /X:209@NE2 atoms
+show /X:132@OG,HG1 /X:266@C30,O16 /X:209@NE2 atoms
+style /X:132@OG,HG1 /X:266@C30,O16 /X:209@NE2 stick
+
+distance /X:132@OG /X:266@C30
+color yellow pseudobonds
+
+distance /X:132@HG1 /X:266@O16
+color white pseudobonds
+
+distance /X:209@NE2 /X:132@HG1
+color white pseudobonds
+
+label /X:132@OG,HG1 /X:266@C30,O16 /X:209@NE2 atoms
+
+coordset #1 1900,2400
+wait 2000
+
+view myviewfull1 480
+wait 480
+
+movie encode /Users/sivadasetty/Desktop/movie_slow_2.mp4 framerate 25.0 quality high

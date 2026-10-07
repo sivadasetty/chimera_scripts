@@ -1,0 +1,24 @@
+movie record
+
+view #1
+wait 60
+
+coordset #1 1,150
+wait 30
+
+select :132,178,209 | :UNK
+view sel
+zoom 2.5
+wait 60
+select clear
+
+coordset #1 150,250
+wait 30
+
+coordset #1 190,230
+wait 60
+
+view #1
+wait 60
+
+movie encode output /Users/sivadasetty/Desktop/uma/petase/results/petase-wt-metad-reactant-to-ts-only_202606-1801-0438-296d/PETase_catalysis.mp4 quality highest

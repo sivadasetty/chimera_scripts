@@ -1,0 +1,45 @@
+~distance
+~label
+
+clip off
+clip front off
+view clip off
+
+cartoon style width 1.5 thickness 0.15 arrows true
+
+coordset #1 1900
+
+movie record
+
+view start
+wait 60
+
+view react 120
+wait 120
+
+hide /X:132@OG,HG1 /X:266@C30,O16 /X:209@NE2 atoms
+show /X:132@OG,HG1 /X:266@C30,O16 /X:209@NE2 atoms
+style /X:132@OG,HG1 /X:266@C30,O16 /X:209@NE2 stick
+
+#color blue pseudobonds
+#distance /X:132@OG /X:266@C30 color blue label color blue
+#label /x:132@OG,HG1 atoms color blue
+
+#distance /X:132@HG1 /X:266@O16 color green
+#label /X:266@C30,O16 atoms color green
+
+#distance /X:209@NE2 /X:132@HG1 color black
+#label /X:209@NE2 atoms color black
+
+#label /X:132@OG,HG1 /X:266@C30,O16 /X:209@NE2 atoms 
+
+#select pbonds
+#label sel pseudobonds color black
+
+coordset #1 1900,2400
+wait 500
+
+view myviewfull1 120
+wait 120
+
+movie encode /Users/sivadasetty/Desktop/movie_white.mp4 framerate 25.0 quality high
